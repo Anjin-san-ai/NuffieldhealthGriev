@@ -1,0 +1,338 @@
+[
+  {
+    "caseId": "GRV100001",
+    "caseType": "Private Healthcare",
+    "complaint": {
+      "description": "I paid for a consultation package but experienced a three-week delay in receiving my MRI results, causing anxiety and delaying treatment.",
+      "category": "Service Delay — Diagnostic Results",
+      "dateRaised": "2026-05-08",
+      "status": "Under Review",
+      "assignedReviewer": "Hannah Roberts",
+      "customerImpactSummary": "Patient reports significant anxiety and a delay to onward treatment planning following an extended wait for MRI imaging results that exceeded the published 5-working-day turnaround."
+    },
+    "customer": {
+      "name": "Sarah Mitchell",
+      "id": "NH100245",
+      "membershipType": "Premium Private Healthcare",
+      "contact": { "email": "sarah.mitchell@example.com", "phone": "+44 7700 900245" },
+      "customerSince": "2019-03-12",
+      "preferredContactMethod": "Email"
+    },
+    "serviceRecords": {
+      "kind": "healthcare",
+      "consultations": [
+        {
+          "date": "2026-04-06",
+          "consultant": "Dr. Michael Hartley",
+          "speciality": "Orthopaedic Surgery",
+          "notes": "Patient presenting with persistent right knee pain. Recommend MRI scan to rule out meniscal tear."
+        },
+        {
+          "date": "2026-05-12",
+          "consultant": "Dr. Michael Hartley",
+          "speciality": "Orthopaedic Surgery",
+          "notes": "Follow-up after delayed MRI. Results reviewed; partial medial meniscus tear confirmed. Discussed conservative management."
+        }
+      ],
+      "appointments": [
+        { "date": "2026-04-06", "type": "Initial Consultation", "location": "Nuffield Health Bristol Hospital", "status": "Completed" },
+        { "date": "2026-04-14", "type": "MRI Scan", "location": "Nuffield Health Bristol Hospital — Imaging", "status": "Completed" },
+        { "date": "2026-05-12", "type": "Results Consultation", "location": "Nuffield Health Bristol Hospital", "status": "Completed" }
+      ],
+      "diagnosticTests": [
+        {
+          "date": "2026-04-14",
+          "test": "MRI — Right Knee",
+          "location": "Nuffield Health Bristol Hospital",
+          "resultsAvailable": "2026-05-05",
+          "expectedTurnaround": "5 working days (by 2026-04-21)"
+        }
+      ],
+      "referrals": [
+        { "date": "2026-04-06", "from": "Dr. Michael Hartley", "to": "Imaging — MRI", "reason": "Suspected meniscal tear, right knee" }
+      ],
+      "treatmentTimeline": [
+        { "date": "2026-04-06", "event": "Initial consultation", "detail": "MRI ordered" },
+        { "date": "2026-04-14", "event": "MRI scan performed" },
+        { "date": "2026-04-21", "event": "Expected results date (per service standard)", "detail": "Not met" },
+        { "date": "2026-04-27", "event": "Patient first chase by email", "detail": "No response within 48h SLA" },
+        { "date": "2026-05-01", "event": "Patient second chase via phone", "detail": "Promised call-back the next day; not received" },
+        { "date": "2026-05-05", "event": "MRI results released to consultant", "detail": "21 days after scan; 14 days late" },
+        { "date": "2026-05-08", "event": "Grievance raised by patient" },
+        { "date": "2026-05-12", "event": "Results consultation held" }
+      ]
+    },
+    "policies": [
+      { "id": "NH-SVC-014", "title": "Diagnostic Imaging Service Standard", "excerpt": "Routine MRI results will be made available to the referring consultant within 5 working days of the scan. Patients should be proactively contacted if a delay is anticipated." },
+      { "id": "NH-COMM-002", "title": "Patient Communication Policy", "excerpt": "Where service standards cannot be met, the patient must be informed within 24 hours with a revised expected date and a named point of contact." },
+      { "id": "NH-CMP-001", "title": "Complaint Handling Policy", "excerpt": "All complaints will be acknowledged within 2 working days and resolved within 20 working days. Goodwill gestures may be offered where service failure is established." },
+      { "id": "NH-PKG-PRV", "title": "Premium Private Healthcare Package Terms", "excerpt": "Includes priority diagnostic scheduling and a dedicated patient liaison for the duration of any open episode of care." }
+    ],
+    "evidence": {
+      "emails": [
+        { "date": "2026-04-27", "from": "sarah.mitchell@example.com", "to": "patientcare.bristol@nuffieldhealth.example", "subject": "MRI results — chasing", "excerpt": "It has now been 13 days since my MRI. I was told to expect results within 5 working days. Please can someone confirm when I will hear back?" },
+        { "date": "2026-05-02", "from": "sarah.mitchell@example.com", "to": "patientcare.bristol@nuffieldhealth.example", "subject": "Re: MRI results — chasing (2)", "excerpt": "I called yesterday and was promised a call-back. I have not heard anything. The wait is causing significant anxiety." },
+        { "date": "2026-05-06", "from": "patientcare.bristol@nuffieldhealth.example", "to": "sarah.mitchell@example.com", "subject": "Re: MRI results", "excerpt": "Apologies for the delay. Your results have now been released to Dr. Hartley. An appointment has been booked for 12 May." }
+      ],
+      "chats": [
+        { "date": "2026-05-02", "agent": "Liam (Patient Care)", "excerpt": "I can see the MRI was performed on 14 April. I am unable to see results on file. I will escalate to Imaging and someone will call you tomorrow." }
+      ],
+      "calls": [
+        { "date": "2026-05-01", "duration": "6m 24s", "agent": "Priya (Imaging Admin)", "summary": "Patient enquiring about delayed MRI results. Promised call-back from radiology lead within 24h. Call-back did not occur." }
+      ],
+      "documents": [
+        { "name": "MRI Report — Right Knee.pdf", "type": "Diagnostic Report", "uploadedOn": "2026-05-05" },
+        { "name": "Premium Healthcare Package — Agreement.pdf", "type": "Contract", "uploadedOn": "2019-03-12" }
+      ],
+      "internalNotes": [
+        { "date": "2026-05-09", "author": "Hannah Roberts (Grievance Reviewer)", "note": "Imaging team confirmed results were ready on 22 April but not released due to administrative backlog. No proactive comms to patient." },
+        { "date": "2026-05-10", "author": "Imaging Lead", "note": "Acknowledged 5-day SLA was not met. Reviewing release-workflow gap." }
+      ]
+    },
+    "recommendation": {
+      "decision": "Uphold Complaint",
+      "confidenceScore": 92,
+      "severity": "High",
+      "justification": {
+        "serviceAssessment": "Patient experienced a 21-day wait for MRI results against a published 5-working-day standard — a 14-day breach. Internal notes confirm results were available on 22 April but not released until 5 May due to an administrative backlog.",
+        "customerImpact": "Patient contacted support on at least three occasions (one email chase, one call, one follow-up email) and reported anxiety and a delay to onward treatment planning. A promised call-back was not delivered.",
+        "policyReview": "The delay is inconsistent with NH-SVC-014 (Imaging) and NH-COMM-002 (Patient Communication), which requires proactive notification within 24h of a foreseeable delay. Premium package terms (NH-PKG-PRV) further entitle the patient to priority handling, which was not evident."
+      },
+      "recommendedActions": [
+        "Issue a formal written apology to the patient citing the specific SLA breach.",
+        "Offer a goodwill gesture (e.g., consultation-fee credit or refund of the imaging element).",
+        "Initiate a service review of the imaging-results release workflow.",
+        "Open a process-improvement investigation to prevent recurrence and report back within 20 working days."
+      ],
+      "insights": [
+        { "title": "Service Delay", "description": "MRI results released 14 working days after the 5-day SLA.", "riskLevel": "High" },
+        { "title": "Communication Failure", "description": "Three patient-initiated contacts; one undelivered promised call-back.", "riskLevel": "Medium" },
+        { "title": "Policy Non-Compliance", "description": "Premium package priority-handling commitment not honoured.", "riskLevel": "High" }
+      ],
+      "explainability": {
+        "evidenceReviewed": [
+          "Appointment Records",
+          "Customer Emails",
+          "CRM Notes",
+          "Service Standards (NH-SVC-014, NH-COMM-002)",
+          "Policies and Contracts"
+        ],
+        "evidenceWeighting": [
+          { "source": "MRI Delay Evidence", "weight": 40 },
+          { "source": "Customer Communications", "weight": 25 },
+          { "source": "Service Standards", "weight": 25 },
+          { "source": "Historical Cases", "weight": 10 }
+        ]
+      }
+    }
+  },
+  {
+    "caseId": "GRV100002",
+    "caseType": "Gym Membership",
+    "complaint": {
+      "description": "I cancelled my membership but continued to be charged for three additional months.",
+      "category": "Billing — Continued Charges After Cancellation",
+      "dateRaised": "2026-05-14",
+      "status": "Under Review",
+      "assignedReviewer": "Marcus Wells",
+      "customerImpactSummary": "Member reports an in-club cancellation request was made but three further monthly direct debits were taken. Member states the cancellation form was completed but no acknowledgment was received."
+    },
+    "customer": {
+      "name": "David Thompson",
+      "id": "NH100246",
+      "membershipType": "Premier Gym (Single Club)",
+      "contact": { "email": "david.thompson@example.com", "phone": "+44 7700 900246" },
+      "customerSince": "2021-08-04",
+      "preferredContactMethod": "Phone"
+    },
+    "serviceRecords": {
+      "kind": "gym",
+      "membershipActivity": [
+        { "date": "2026-01-30", "activity": "Last gym visit before cancellation request" },
+        { "date": "2026-02-01", "activity": "Cancellation form submitted in-club (per member)" },
+        { "date": "2026-02-02", "activity": "Direct debit collected — £64.00" },
+        { "date": "2026-03-02", "activity": "Direct debit collected — £64.00" },
+        { "date": "2026-04-02", "activity": "Direct debit collected — £64.00" },
+        { "date": "2026-04-18", "activity": "Member emailed billing team querying charges" },
+        { "date": "2026-05-02", "activity": "Direct debit collected — £64.00 (4th)" },
+        { "date": "2026-05-14", "activity": "Grievance raised" }
+      ],
+      "accessLogs": [
+        { "date": "2026-01-12", "location": "Bristol Club", "durationMinutes": 58 },
+        { "date": "2026-01-20", "location": "Bristol Club", "durationMinutes": 72 },
+        { "date": "2026-01-30", "location": "Bristol Club", "durationMinutes": 41 }
+      ],
+      "membershipChanges": [
+        { "date": "2026-02-01", "change": "Cancellation form submitted in-club", "initiatedBy": "Member" },
+        { "date": "2026-05-15", "change": "Membership marked as cancelled in CRM", "initiatedBy": "Customer Service" }
+      ],
+      "cancellationRequests": [
+        { "date": "2026-02-01", "channel": "In-club paper form", "reference": "CXL-2026-02-019", "acknowledged": false, "acknowledgmentDate": null },
+        { "date": "2026-04-18", "channel": "Email", "reference": "CXL-2026-04-217", "acknowledged": true, "acknowledgmentDate": "2026-04-22" }
+      ]
+    },
+    "policies": [
+      { "id": "NH-GYM-007", "title": "Gym Membership Cancellation Policy", "excerpt": "Members may cancel by completing the in-club cancellation form or by writing to membership services. A 30-day notice period applies; one further monthly payment may be collected within the notice period." },
+      { "id": "NH-GYM-008", "title": "Cancellation Acknowledgment Standard", "excerpt": "All cancellation requests must be acknowledged in writing within 5 working days, confirming the effective end date and any final payment." },
+      { "id": "NH-FIN-003", "title": "Refund Policy — Membership Fees", "excerpt": "Where charges are collected after a valid cancellation request, the member is entitled to a refund of the over-collected amount within 10 working days of confirmation." },
+      { "id": "NH-CMP-001", "title": "Complaint Handling Policy", "excerpt": "All complaints will be acknowledged within 2 working days and resolved within 20 working days." }
+    ],
+    "evidence": {
+      "emails": [
+        { "date": "2026-04-18", "from": "david.thompson@example.com", "to": "membership@nuffieldhealth.example", "subject": "I cancelled in February — still being charged", "excerpt": "I completed the cancellation form in club on 1 February. I am still being charged. I have screenshots of the bank statements. Please refund." },
+        { "date": "2026-04-22", "from": "membership@nuffieldhealth.example", "to": "david.thompson@example.com", "subject": "Re: Cancellation enquiry", "excerpt": "We are unable to locate a cancellation request before 18 April. Per the 30-day notice period one further payment may apply." }
+      ],
+      "chats": [],
+      "calls": [
+        { "date": "2026-05-03", "duration": "11m 02s", "agent": "Aisha (Membership)", "summary": "Member explained the February in-club form. Agent unable to find the form. Promised to escalate to club manager." }
+      ],
+      "documents": [
+        { "name": "Bank statement excerpts — Feb-May 2026.pdf", "type": "Evidence", "uploadedOn": "2026-05-14" },
+        { "name": "Cancellation form photo (member-supplied).jpg", "type": "Evidence", "uploadedOn": "2026-05-14" }
+      ],
+      "internalNotes": [
+        { "date": "2026-05-15", "author": "Bristol Club Manager", "note": "Located the February cancellation form filed under the wrong month. Acknowledgment was never issued." },
+        { "date": "2026-05-16", "author": "Marcus Wells (Grievance Reviewer)", "note": "Per policy, one payment is owed for the 30-day notice period; three subsequent payments are over-collection." }
+      ]
+    },
+    "recommendation": {
+      "decision": "Partially Uphold Complaint",
+      "confidenceScore": 88,
+      "severity": "Medium",
+      "justification": {
+        "serviceAssessment": "An in-club cancellation form was completed on 1 February and subsequently misfiled. The acknowledgment required by NH-GYM-008 was not issued. Four monthly payments were taken after the cancellation request.",
+        "customerImpact": "Member made multiple contacts and supplied bank-statement evidence. Reports frustration and time spent chasing.",
+        "policyReview": "Per NH-GYM-007 a 30-day notice period applies, so one of the four collected payments is contractually due. Three payments are over-collection and refundable under NH-FIN-003."
+      },
+      "recommendedActions": [
+        "Confirm cancellation effective 1 March 2026 (30 days after 1 February).",
+        "Refund three monthly payments (£192.00 in total) within 10 working days.",
+        "Issue a written apology covering the misfiling and the lack of acknowledgment.",
+        "Review the in-club cancellation-form intake process at the Bristol club."
+      ],
+      "insights": [
+        { "title": "Process Failure", "description": "In-club cancellation form misfiled; no acknowledgment issued.", "riskLevel": "Medium" },
+        { "title": "Billing Over-Collection", "description": "Three monthly payments collected after the contractual end date.", "riskLevel": "Medium" },
+        { "title": "Acknowledgment SLA Missed", "description": "5-working-day acknowledgment standard (NH-GYM-008) not met.", "riskLevel": "Medium" }
+      ],
+      "explainability": {
+        "evidenceReviewed": [
+          "Membership Agreement",
+          "Cancellation Requests",
+          "Payment History",
+          "Customer Communications",
+          "CRM Notes"
+        ],
+        "evidenceWeighting": [
+          { "source": "Cancellation Evidence", "weight": 35 },
+          { "source": "Payment History", "weight": 30 },
+          { "source": "Customer Communications", "weight": 20 },
+          { "source": "Membership T&Cs", "weight": 15 }
+        ]
+      }
+    }
+  },
+  {
+    "caseId": "GRV100003",
+    "caseType": "Insurance Claim",
+    "complaint": {
+      "description": "My physiotherapy treatment was declined despite receiving a consultant referral.",
+      "category": "Claim Decline — Treatment Authorisation",
+      "dateRaised": "2026-05-20",
+      "status": "Open",
+      "assignedReviewer": "Olivia Carter",
+      "customerImpactSummary": "Member states physiotherapy was declined after a valid consultant referral. Member is paying out-of-pocket and is concerned about the impact on rehabilitation."
+    },
+    "customer": {
+      "name": "Emma Patel",
+      "id": "NH100247",
+      "membershipType": "Health Insurance — Comprehensive",
+      "contact": { "email": "emma.patel@example.com", "phone": "+44 7700 900247" },
+      "customerSince": "2022-11-19",
+      "preferredContactMethod": "Email"
+    },
+    "serviceRecords": {
+      "kind": "insurance",
+      "referral": {
+        "date": "2026-04-29",
+        "consultant": "Mr. Jonathan Singh",
+        "speciality": "Orthopaedic Consultant",
+        "diagnosis": "Sub-acromial impingement, right shoulder",
+        "recommendedTreatment": "Course of physiotherapy — 6 sessions"
+      },
+      "treatmentRequest": {
+        "date": "2026-05-04",
+        "provider": "Riverside Physiotherapy Clinic",
+        "treatmentType": "Outpatient Physiotherapy",
+        "sessionsRequested": 6,
+        "estimatedCost": "£540.00"
+      },
+      "claims": [
+        { "date": "2026-05-08", "reference": "CLM-2026-05-1148", "status": "Declined", "amount": "£540.00", "notes": "Decline reason on letter: 'No prior authorisation on file.'" }
+      ],
+      "priorAuthorisations": [
+        { "date": "2026-05-04", "treatment": "Physiotherapy — 6 sessions", "status": "Not Submitted", "reference": null }
+      ]
+    },
+    "policies": [
+      { "id": "NH-INS-021", "title": "Comprehensive Plan — Outpatient Physiotherapy", "excerpt": "Outpatient physiotherapy is covered when supported by a consultant referral. Prior authorisation is required for courses exceeding 4 sessions." },
+      { "id": "NH-INS-022", "title": "Prior Authorisation Workflow", "excerpt": "When a consultant referral indicates a treatment course requiring prior authorisation, the insurer will request the missing authorisation rather than declining the claim outright, where the referral is otherwise valid." },
+      { "id": "NH-INS-023", "title": "Claims Decision Communication", "excerpt": "Decline letters must specify the policy section and indicate any remediation route (e.g., submission of missing authorisation) before final decline." },
+      { "id": "NH-CMP-001", "title": "Complaint Handling Policy", "excerpt": "All complaints will be acknowledged within 2 working days and resolved within 20 working days." }
+    ],
+    "evidence": {
+      "emails": [
+        { "date": "2026-05-10", "from": "emma.patel@example.com", "to": "claims@nuffieldhealth.example", "subject": "Physiotherapy claim declined", "excerpt": "I have a consultant referral from Mr. Singh and was told physiotherapy is covered. The decline letter just says 'no prior authorisation'. No one asked me for one." },
+        { "date": "2026-05-13", "from": "claims@nuffieldhealth.example", "to": "emma.patel@example.com", "subject": "Re: Physiotherapy claim declined", "excerpt": "Our records show no prior authorisation on file. You may resubmit with authorisation; however the original claim remains declined." }
+      ],
+      "chats": [
+        { "date": "2026-05-15", "agent": "Tomas (Claims)", "excerpt": "Confirmed referral is on file and valid. Course is 6 sessions which exceeds the 4-session threshold and therefore needs prior auth. We can re-process if authorisation is obtained." }
+      ],
+      "calls": [],
+      "documents": [
+        { "name": "Consultant referral letter — Mr. Singh.pdf", "type": "Referral", "uploadedOn": "2026-04-29" },
+        { "name": "Claim decline letter.pdf", "type": "Claims Correspondence", "uploadedOn": "2026-05-08" },
+        { "name": "Comprehensive Plan policy schedule.pdf", "type": "Policy Document", "uploadedOn": "2022-11-19" }
+      ],
+      "internalNotes": [
+        { "date": "2026-05-21", "author": "Olivia Carter (Grievance Reviewer)", "note": "Referral is valid. The decline letter did not signpost the missing-authorisation remediation route required by NH-INS-022 and NH-INS-023." }
+      ]
+    },
+    "recommendation": {
+      "decision": "Partially Uphold Complaint",
+      "confidenceScore": 85,
+      "severity": "High",
+      "justification": {
+        "serviceAssessment": "A valid consultant referral was on file. The claim was declined for missing prior authorisation, which is required because the course exceeds 4 sessions. However, the decline communication did not follow NH-INS-022, which directs the insurer to request the missing authorisation before final decline.",
+        "customerImpact": "Member is paying out-of-pocket and has expressed concern about delayed rehabilitation. Multiple contacts have been needed to clarify the route forward.",
+        "policyReview": "The substantive decline is policy-correct (prior authorisation absent), but the process failed NH-INS-022 and NH-INS-023. The complaint is partially upheld on process grounds."
+      },
+      "recommendedActions": [
+        "Re-open the claim and request prior authorisation from the consultant on the member's behalf.",
+        "Reimburse any sessions undertaken after the original referral, subject to standard cover limits, once authorisation is in place.",
+        "Issue a written apology for the process failure in the decline letter.",
+        "Audit decline letters issued in the prior 90 days for similar signposting gaps."
+      ],
+      "insights": [
+        { "title": "Process Failure", "description": "Decline issued without signposting the authorisation-remediation route.", "riskLevel": "High" },
+        { "title": "Member Communication", "description": "Two emails and a chat needed to surface the correct next step.", "riskLevel": "Medium" },
+        { "title": "Audit Exposure", "description": "Similar decline-letter patterns may exist; broader audit recommended.", "riskLevel": "High" }
+      ],
+      "explainability": {
+        "evidenceReviewed": [
+          "Consultant Referral",
+          "Treatment Request",
+          "Claim History",
+          "Prior Authorisations",
+          "Policy Terms"
+        ],
+        "evidenceWeighting": [
+          { "source": "Referral and Treatment Request", "weight": 35 },
+          { "source": "Policy Terms (NH-INS-021/022/023)", "weight": 30 },
+          { "source": "Claims Correspondence", "weight": 20 },
+          { "source": "Customer Communications", "weight": 15 }
+        ]
+      }
+    }
+  }
+]

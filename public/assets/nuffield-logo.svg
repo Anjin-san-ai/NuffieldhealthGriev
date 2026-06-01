@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="Nuffield Health">
+  <g>
+    <circle cx="24" cy="24" r="18" fill="#00A39E"/>
+    <path d="M16 16 L16 32 M16 16 L26 32 M26 16 L26 32" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <path d="M30 16 L30 32 M34 16 L34 32 M30 24 L34 24" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+  </g>
+  <g fill="#005F5C" font-family="Inter, Roboto, system-ui, sans-serif">
+    <text x="54" y="22" font-size="16" font-weight="700" letter-spacing="-0.2">Nuffield</text>
+    <text x="54" y="40" font-size="13" font-weight="500" fill="#00A39E" letter-spacing="0.5">HEALTH</text>
+  </g>
+</svg>
