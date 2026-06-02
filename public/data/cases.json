@@ -58,7 +58,7 @@
         { "date": "2026-04-27", "event": "Patient first chase by email", "detail": "No response within 48h SLA" },
         { "date": "2026-05-01", "event": "Patient second chase via phone", "detail": "Promised call-back the next day; not received" },
         { "date": "2026-05-05", "event": "MRI results released to consultant", "detail": "21 days after scan; 14 days late" },
-        { "date": "2026-05-08", "event": "Grievance raised by patient" },
+        { "date": "2026-05-08", "event": "Complaint raised by patient" },
         { "date": "2026-05-12", "event": "Results consultation held" }
       ]
     },
@@ -85,7 +85,7 @@
         { "name": "Premium Healthcare Package — Agreement.pdf", "type": "Contract", "uploadedOn": "2019-03-12" }
       ],
       "internalNotes": [
-        { "date": "2026-05-09", "author": "Hannah Roberts (Grievance Reviewer)", "note": "Imaging team confirmed results were ready on 22 April but not released due to administrative backlog. No proactive comms to patient." },
+        { "date": "2026-05-09", "author": "Hannah Roberts (Complaints Reviewer)", "note": "Imaging team confirmed results were ready on 22 April but not released due to administrative backlog. No proactive comms to patient." },
         { "date": "2026-05-10", "author": "Imaging Lead", "note": "Acknowledged 5-day SLA was not met. Reviewing release-workflow gap." }
       ]
     },
@@ -155,7 +155,7 @@
         { "date": "2026-04-02", "activity": "Direct debit collected — £64.00" },
         { "date": "2026-04-18", "activity": "Member emailed billing team querying charges" },
         { "date": "2026-05-02", "activity": "Direct debit collected — £64.00 (4th)" },
-        { "date": "2026-05-14", "activity": "Grievance raised" }
+        { "date": "2026-05-14", "activity": "Complaint raised" }
       ],
       "accessLogs": [
         { "date": "2026-01-12", "location": "Bristol Club", "durationMinutes": 58 },
@@ -192,7 +192,7 @@
       ],
       "internalNotes": [
         { "date": "2026-05-15", "author": "Bristol Club Manager", "note": "Located the February cancellation form filed under the wrong month. Acknowledgment was never issued." },
-        { "date": "2026-05-16", "author": "Marcus Wells (Grievance Reviewer)", "note": "Per policy, one payment is owed for the 30-day notice period; three subsequent payments are over-collection." }
+        { "date": "2026-05-16", "author": "Marcus Wells (Complaints Reviewer)", "note": "Per policy, one payment is owed for the 30-day notice period; three subsequent payments are over-collection." }
       ]
     },
     "recommendation": {
@@ -295,7 +295,7 @@
         { "name": "Comprehensive Plan policy schedule.pdf", "type": "Policy Document", "uploadedOn": "2022-11-19" }
       ],
       "internalNotes": [
-        { "date": "2026-05-21", "author": "Olivia Carter (Grievance Reviewer)", "note": "Referral is valid. The decline letter did not signpost the missing-authorisation remediation route required by NH-INS-022 and NH-INS-023." }
+        { "date": "2026-05-21", "author": "Olivia Carter (Complaints Reviewer)", "note": "Referral is valid. The decline letter did not signpost the missing-authorisation remediation route required by NH-INS-022 and NH-INS-023." }
       ]
     },
     "recommendation": {

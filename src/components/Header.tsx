@@ -13,7 +13,7 @@ export function Header() {
               Generative AI for Healthcare
             </div>
             <div className="text-lg font-semibold text-slate-ink">
-              Customer Grievance Resolution Assistant
+              Customer Complaints Management Assistance
             </div>
           </div>
         </div>
