@@ -1044,16 +1044,7 @@
 <body>
     <!-- Header Banner -->
     <header class="header-banner">
-        <div class="banner-left">
-            <img src="assets/nuffield-logo.svg" alt="Nuffield Health" style="height:36px;width:auto;" />
-            <div class="banner-divider"></div>
-            <img class="cognizant-logo" id="cognizantLogo" src="assets/cognizant-logo.svg" alt="Cognizant" />
-            <div class="banner-divider"></div>
-            <div style="display:flex;flex-direction:column;">
-                <span style="font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#00A39E;">Generative AI for Healthcare</span>
-                <span style="font-size:14px;font-weight:700;color:#0b0c0c;">Complaints Management Assistance — Agent Network</span>
-            </div>
-        </div>
+        <div class="banner-left"></div>
         <div class="banner-right">
             <button class="btn-view-app" id="btnViewApp" onclick="showChat()">
                 <i class="fa-solid fa-comments"></i>
@@ -1158,8 +1149,8 @@
     </div>
 
     <script>
-        // Cognizant logo served from /assets/
-        document.getElementById('cognizantLogo').src = 'assets/cognizant-logo.svg';
+        // Logos intentionally removed from the in-iframe banner — the outer
+        // React app already shows Nuffield Health / Cognizant branding.
 
         // ===================== AGENT NETWORK LOGIC =====================
         let agentNodes = [];
