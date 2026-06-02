@@ -51,7 +51,7 @@ function App() {
         </div>
       </div>
 
-      <main className={`flex-1 w-full ${view === 0 ? 'max-w-[1600px] mx-auto px-4 sm:px-6 py-6' : ''}`}>
+      <main className={`flex-1 w-full flex flex-col ${view === 0 ? 'max-w-[1600px] mx-auto px-4 sm:px-6 py-6' : ''}`}>
         {view === 0 && (
           <>
             {loading && (
